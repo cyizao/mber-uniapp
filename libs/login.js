@@ -1,13 +1,3 @@
-// +----------------------------------------------------------------------
-// | CRMEB [ CRMEB赋能开发者，助力企业发展 ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2016~2022 https://www.crmeb.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed CRMEB并不是自由软件，未经许可不能去掉CRMEB相关版权
-// +----------------------------------------------------------------------
-// | Author: CRMEB Team <admin@crmeb.com>
-// +----------------------------------------------------------------------
-
 import store from "../store";
 import Cache from '../utils/cache';
 import {
@@ -34,14 +24,8 @@ function prePage() {
 	// #ifndef APP-PLUS
 	return prePage.route;
 	// #endif
-	// #ifdef APP-PLUS
-	return prePage.$page.fullPath;
-	// #endif
 
 }
-
-
-
 
 export const toLogin = Debounce(_toLogin, 800)
 
@@ -84,8 +68,7 @@ function _toLogin(push, pathLogin) {
 		// }
 		uni.navigateTo({
 			url: '/pages/users/wechat_login/index',
-		});
-
+		})
 	} else {
 		uni.navigateTo({
 			url: '/pages/users/login/index'
@@ -117,7 +100,6 @@ function _toLogin(push, pathLogin) {
 
 }
 
-
 export function checkLogin() {
 	let token = Cache.get(LOGIN_STATUS);
 	// let token
@@ -138,5 +120,4 @@ export function checkLogin() {
 		}
 		return true;
 	}
-
 }

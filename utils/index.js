@@ -1,13 +1,3 @@
-// +----------------------------------------------------------------------
-// | CRMEB [ CRMEB赋能开发者，助力企业发展 ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2016~2022 https://www.crmeb.com All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed CRMEB并不是自由软件，未经许可不能去掉CRMEB相关版权
-// +----------------------------------------------------------------------
-// | Author: CRMEB Team <admin@crmeb.com>
-// +----------------------------------------------------------------------
-
 import {
 	spread
 } from "@/api/user";
@@ -19,6 +9,7 @@ import {
 	getWorkermanUrl
 } from '@/api/kefu.js'
 import store from '@/store';
+
 /**
  * 绑定用户授权
  * @param {Object} puid
@@ -50,11 +41,13 @@ export function silenceBindingSpread(app) {
 			app.spid = 0;
 			app.code = 0;
 			//#endif
-
 		}).catch(res => {});
 	}
 }
 
+/**
+ * 判断是否处于微信内置浏览器
+ */
 export function isWeixin() {
 	return navigator.userAgent.toLowerCase().indexOf("micromessenger") !== -1;
 }
@@ -78,22 +71,6 @@ export function getCustomer(url) {
 			if (res.data.customer_url.indexOf('work.weixin.qq.com') > 0) {
 				// #ifdef H5
 				return window.location.href = res.data.customer_url
-				// #endif			
-				// #ifdef MP
-				uni.openCustomerServiceChat({
-					extInfo: {
-						url: res.data.customer_url
-					},
-					corpId: res.data.customer_corpId,
-					success(res) {},
-					fail(err) {
-						uni.showToast({
-							title: err.errMsg,
-							icon: 'none',
-							duration: 2000
-						});
-					}
-				})
 				// #endif
 			} else {
 				uni.navigateTo({

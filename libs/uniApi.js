@@ -1,4 +1,3 @@
-
 export function navigateTo(type,url,opt){
 let toUrl=url;
 let api='navigateTo';

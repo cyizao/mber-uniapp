@@ -153,6 +153,9 @@
 				uni.showLoading({
 					title: that.$t(`正在登录中`)
 				});
+				/**
+				 * ToDo: key is undefind
+				 */
 				if (!this.authKey) {
 					let key = this.$Cache.get('snsapiKey');
 					this.phoneAuth(key)
