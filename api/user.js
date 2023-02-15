@@ -2,7 +2,6 @@ import request from "@/utils/request.js";
 
 /**
  * 获取用户信息
- * 
  */
 export function getUserInfo() {
 	return request.get('user');
@@ -10,7 +9,6 @@ export function getUserInfo() {
 
 /**
  * 设置用户分享
- * 
  */
 export function userShare() {
 	return request.post('user/share');

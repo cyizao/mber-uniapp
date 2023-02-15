@@ -13,7 +13,6 @@ const Socket = function() {
 	// this.ws.close(this.close.bind(this));
 };
 
-
 // #ifdef H5
 function wss(wsSocketUrl) {
 	let ishttps = document.location.protocol == 'https:';

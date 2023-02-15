@@ -20,7 +20,6 @@ export function goShopDetail(item, uid) {
 	});
 }
 
-
 export function goPage() {
 	return new Promise(resolve => {
 		if (app.globalData.isIframe == false) {

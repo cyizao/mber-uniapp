@@ -28,7 +28,6 @@ class AuthWechat {
 		this.status = false;
 
 		this.initConfig = {};
-
 	}
 
 	isAndroid() {

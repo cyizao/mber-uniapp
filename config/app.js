@@ -2,7 +2,7 @@ module.exports = {
 	// 小程序配置
 	// #ifdef MP || APP-PLUS
 	// 请求域名 格式： https://您的域名
-	HTTP_REQUEST_URL: `https://demo.crmeb.com`,
+	HTTP_REQUEST_URL: `https://www.cyzweb.com`,
 	// #endif
 
 	// H5配置

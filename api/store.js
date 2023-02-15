@@ -3,7 +3,6 @@ import request from "@/utils/request.js";
 /**
  * 获取产品详情
  * @param int id
- * 
  */
 export function getProductDetail(id) {
 	return request.get('product/detail/' + id, {}, {
